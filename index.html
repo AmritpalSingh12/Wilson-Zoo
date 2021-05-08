@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page</title>
+</head>
+<body>
+<header>
+    <a href="index.html">
+    <img src="image/logo.jpg" alt="Wilson Zoo">
+</a>
+</header>
+    <!--Navigation links-->
+<hr>
+    <nav>
+        <table cellspacing="5" cellpadding="5">
+            <tr>
+                <td><a href="index.html">Home Page</a></td>
+                <td><a href="about the zoo.html">About the zoo</a></td>
+                <td><a href="the animal.html">The animals</a></td>
+                <td><a href="kids page.html">Kids Page</a></td>
+            </tr>
+        </table>
+    </nav>
+<hr>
+<h1>Welcome to Wilson Zoo</h1>
+<p>
+    Wilson Zoo runs as a not for profit charity relying on ticket sales in order to operate and care for our many exotic species.
+    Due to the COVID-19 virus we were closed for four months last year and now we're closed again - we’re hoping your support could see us through these troubling times.
+    Please consider still making a donation, every little helps!
+    <h2>Did you know?</h2>
+    <div id="list1">
+    <li>the upkeep and care of one lemur costs £1 a day and an ape is £5 per day</li>
+    <li>to care for the giraffes for one day costs £15</li>
+    <li>the upkeep of the sloth for one week costs £20</li>
+    <li>to care for the lions for one week costs £100</li>
+    <li>to care for the sea lions for one week costs £250</li>
+    <li>to feed and care for our penguins for one month costs £1,200 </li>
+    </div>
+</p>
+<a href="donation.html">
+<button id="btndonation">Booking and Donation</button>
+</a>
+<a href="Coming soon.html">
+    <button id="btnlatestnews">Latest News</button>
+</a>
+<h3>Vision</h3>
+<p>We envison a wolrd where wildlife and humas flouriush together.</p>
+<h3>Mission</h3>
+<p>We save wildlife and their habitats through conservation, research, education and engaging experiences. Our efforts connect people to animals and inspire conservation action.</p>
+<h3>Values</h>
+<li>Integrity – We are respectful, honest, transparent and accountable. We expect the same from our industry colleagues and partners.</li>
+ <li>Innovation – We are creative, resourceful, and resilient. We celebrate a culture of continuous improvement, and we aspire to be the leader in our field.</li>
+ <li>Diversity – We see collective power in our differences and embrace the notion that we all have something special to offer. We respect and value the diversity of all life.</li>
+ <li>Safety – We are committed to protecting the safety and health of our employees, animals, guests and Members, our community and partners.</li>
+ 
+ <footer>
+     <p>Name: Amritpal Singh </p>
+     <p id="id">Student ID: 20015952</p>
+     <p id="copy">&copy;Wilson Zoo</p>
+ </footer>
+<script>
+    // You can change the number on the end of the site to refresh the cache
+const CACHE_NAME = 'my-site-v1';
+
+// add all your files in the CACHE_URLS
+const CACHE_URLS = ['/', 'index.html',
+  'the animals.html',
+  'styles.css',
+  'donation.html',
+  'index.html',
+  'kids page.html',
+  'stylekid.css','coming soon.html', 'asianelephant.jpg','blackrhino.jpg','bygs.jpg','caribbeanflamigo.jpg','cheetah.jpg','chimpanzee.jpg','chongobuffalo.jpg',
+  'comingsonn.jpg','downloadnow.jpd.PNG','ecuadoramazonparrot.jpg','girafee.jpg','jaguar.jpg','location.jpg','logo.jpg','rhino.jpg','tuatura.jpg',
+  'wildzoo.jpg'
+  
+  // add all your files in here, in the correct folders. No need to add this file
+];
+//DO NOT change any of the code below
+
+self.addEventListener("install", function (event) {
+  console.log("Service worker installed");
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function (cache) {
+        console.log("Cache opened");
+        return cache.addAll(CACHE_URLS);
+      })
+  );
+});
+
+
+self.addEventListener('activate', function (event) {
+  event.waitUntil(
+    caches.keys().then(function (cacheNames) {
+      return Promise.all(
+        cacheNames.map(function (cacheName) {
+          if (cacheName.startsWith('my-site-') && CACHE_NAME !== cacheName) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
+
+self.addEventListener("fetch", function (event) {
+  event.respondWith(
+    caches.match(event.request).then(function (response) {
+      if (response) {
+        console.log(`Return ${event.request.url} from cache`);
+        return response;
+      }
+      console.log(`Fetch ${event.request.url} from network`);
+      return fetch(event.request);
+    })
+  );
+});
+</script>
+
+ <script src="main.js"></script>
+ <script>
+
+    //check whether browser support service workers
+    
+    if ('serviceWorker' in navigator) {
+    
+    window.addEventListener('load', function() {
+    
+    navigator.serviceWorker.register('serviceworker.js').then(
+    
+    function(registration) {
+    
+    console.log('Service worker registration successful',registration);
+    
+    },
+    
+    function(err) {
+    
+    console.log('Service worker registration failed', err);
+    
+    });
+    
+    });
+    
+    }
+    
+    </script>
+</body>
+
+</html>

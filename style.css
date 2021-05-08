@@ -1,0 +1,346 @@
+
+h1{
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+}
+body{
+    background-color: rgb(180, 216, 122);
+    padding: 0;
+    margin: 0;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer{
+    padding: auto;
+    background-color: burlywood;
+}
+#id{
+    text-align: center;
+    margin-top: -34px;
+}
+#copy{
+    text-align: right;
+    margin-top: -34px;
+}
+h2{
+    font-weight: bolder;
+    text-align: center;
+}
+#list1{
+    text-align: center;
+}
+#btndonation{
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20cm;
+    display: block;
+    margin: auto;    
+}
+#btnlatestnews{
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 20cm;
+  display: block;
+  margin: auto;
+}
+#Address{
+    text-align: right;
+    margin-right: 800px;
+    margin-top: -350px;
+    
+}
+#Animals{
+    font-size: medium;
+    text-align: center;
+    font-weight: bolder;
+}
+#opening{
+    text-align: center;
+    margin-top: 300px;
+}
+#Map{
+    margin: auto;
+    text-align: right;
+}
+
+
+/*this style is for the booking form */
+
+.donation-container {
+	height: 1000px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 30px;
+}
+
+.donation-box {
+	width: 390px;
+	height: 386px;
+	background-color: #F5F5F5;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.donation-box .title {
+	background-color: #C1D82F;
+	width: 100%;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	color: white;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 15px;
+}
+
+.donation-box .donate-button {
+	background-color: #C1D82F;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 18px;
+	bottom: 0px;
+	position: absolute;
+	cursor: pointer;
+	font-weight: 800;
+}
+
+.donation-box .fields {
+	width: 59%;
+	display: block;
+	position: absolute;
+	top: 60px;
+	left: 15px;
+}
+
+.donation-box .fields input {
+	width: 90%;
+	font-size: 17px;
+	padding: 10px;
+	border-radius: 4px;
+	border-width: 0px;
+	color: #5C5C5C;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	margin-bottom: 10px;
+	
+}
+
+
+
+.donation-box .amount {
+	width: 30%;
+	display: block;
+	position: absolute;
+	top: 60px;
+	right: 15px;
+}
+
+.donation-box .amount .button {
+	width: 100%;
+	background-color: gray;
+	margin-bottom: 10px;
+	text-align: center;
+	color: white;
+	padding: 15px 0px 15px 0px;
+	border-radius: 4px;
+	font-size: 20px;
+	cursor: pointer;
+	
+}
+
+.donation-box .amount .button:hover {
+	background-color: #393939;
+}
+
+.donation-box .amount .button.selected {
+	background-color: #393939;
+}
+
+.donation-box .amount .button input {
+	min-width: 34px;
+	font-size: 20px;
+	font-weight: 500;
+	border: none;
+	background-color: transparent;
+	color: white;
+	font-family: Montserrat, sans-serif;
+	font-size: 20px;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	border-bottom: 2px dashed white;
+	
+}
+
+.set-amount {
+	max-width: 96px;
+}
+
+.switch {
+  position: absolute;
+  top: 190px;
+  left: 15px;
+  margin: 20px auto;
+  height: 26px;
+  width: 58.5%;
+  background: white;
+  border-radius: 3px;
+}
+
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 49%;
+  line-height: 26px;
+  font-size: 11px;
+  color: #5C5C5C;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+.switch-label:active {
+  font-weight: bold;
+}
+
+.switch-label-off {
+  padding-left: 2px;
+}
+
+.switch-label-on {
+  padding-right: 2px;
+}
+
+.switch-input {
+  display: none;
+}
+.switch-input:checked + .switch-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.65);
+  
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  left: 114px;
+}
+
+.switch-selection {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: 49%;
+  height: 22px;
+  background: #65bd63;
+  border-radius: 3px;
+  background-color: #C1D82F;
+  
+}
+
+.checkboxes {
+	position: absolute;
+	top: 242px;
+	left: 13px;
+}
+
+.checkboxes label {
+	position: relative;
+	top: -8px;
+	font-size: 13px;
+	color: gray;
+}
+
+
+
+
+
+/*this style is for booking infomation */
+
+  
+  div.elem-group {
+    margin: 20px 0;
+  }
+  
+  div.elem-group.inlined {
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  #lebel {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+  }
+  
+  input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+  }
+  
+  div.elem-group.inlined input {
+    width: 95%;
+    display: inline-block;
+  }
+  
+  textarea {
+    height: 250px;
+  }
+  
+  hr {
+    border: 1px dotted #ccc;
+  }
+  
+  button {
+    height: 50px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    border: 2px solid black;
+  }
+  
+#Booking {
+    margin-top: -500px;
+}
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+  
+
+

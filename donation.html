@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Donation/Booking</title>
+</head>
+<body>
+<header>
+    <a href="index.html">
+    <img src="image/logo.jpg" alt="Wilson Zoo">
+</a>
+</header>
+    <!--Navigation links-->
+<hr>
+    <nav>
+        <table cellspacing="5" cellpadding="5">
+            <tr>
+                <td><a href="index.html">Home Page</a></td>
+                <td><a href="about the zoo.html">About the zoo</a></td>
+                <td><a href="the animal.html">The animals</a></td>
+                <td><a href="kids page.html">Kids Page</a></td>
+            </tr>
+        </table>
+    </nav>
+<hr>
+</head>
+<body>
+<h1>Donation</h1>
+<div class="donation-container">
+            
+            <div class="donation-box">
+	            <div class="title">Donation Information</div>
+	            
+	            <div class="fields">
+		            <input type="text" id="firstName" placeholder="First Name"> </input>
+		            <input type="text" id="lastName" placeholder="Last Name"> </input>
+		            <input type="text" id="email" placeholder="Email"> </input>
+	            </div>
+	            
+	            <div class="amount">
+		            <div class="button">£30</div>
+		            <div class="button">£50</div>
+		            <div class="button">£100</div>
+		            <div class="button">£<input type="text" class="set-amount" placeholder=""> </input></div>
+	            </div>
+	            
+	            <div class="switch">
+					<input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="">
+					<label for="one-time" class="switch-label switch-label-off">One-Time</label>
+					<input type="radio" class="switch-input" name="view" value="Monthly" id="monthly">
+					<label for="monthly" class="switch-label switch-label-on">Monthly</label>
+					<span class="switch-selection"></span>
+			    </div>
+			    
+			    <div class="checkboxes">
+					<input type="checkbox" id="receipt" class="checkbox" />
+					<label for="receipt">Email Me A Receipt</label>
+					<br />
+					<input type="checkbox" id="anon" class="checkbox" />
+					<label for="anon">Give Anonymously</label>
+					<br />
+					<input type="checkbox" id="list" class="checkbox" />
+					<label for="list">Add Me To Email List</label>
+			    </div>
+			    
+			    <div class="confirm">
+				    
+			    </div>
+	            
+	            <div class="donate-button"><i class="fa fa-credit-card"></i> Donate Now</div>
+            </div>
+             </div>
+<section id="Booking">
+<h1>Booking</h1>
+<form action="booking.phd" method="post">
+    <div class="elem-group">
+      <label id="lebel" for="name">Your Name</label>
+      <input type="text" id="name" name="visitor_name" placeholder="First Name" pattern=[A-Z\sa-z]{3,20} required>
+    </div>
+    <div class="elem-group">
+      <label id="lebel" for="email">Your E-mail</label>
+      <input type="email" id="email" name="visitor_email" placeholder="Email" required>
+    </div>
+    <div class="elem-group">
+      <label id="lebel" for="phone">Your Phone</label>
+      <input type="tel" id="phone" name="visitor_phone" placeholder="Phone number" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+      <label id="lebel" for="adult">Adults</label>
+      <input type="number" id="adult" name="total_adults" placeholder="" min="1" required>
+    </div>
+    <div class="elem-group inlined">
+      <label id="lebel" for="child">Children</label>
+      <input type="number" id="child" name="total_children" placeholder="" min="0" required>
+    </div>
+    <div class="elem-group inlined">
+      <label id="lebel" for="visiting-date">Visiting Date</label>
+      <input type="date" id="visitingdate" name="checkin" required>
+    </div>
+    
+    </div>
+    <div class="elem-group">
+      <label id="lebel" for= "zoo-selection">Select Zoo Preference</label>
+      <select id="zoo-selection" name="zoo_preference" required>
+          <option value="">Choose a preferences from the List</option>
+          <option value="connecting">Wild area</option>
+          <option value="adjoining">Aquatic area</option>
+          <option value="adjacent">All area</option>
+      </select>
+    </div>
+    <hr>
+    <div class="elem-group">
+      <label id="lebel" for="message">Anything Else?</label>
+      <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<footer>
+    <p>Name: Amritpal Singh </p>
+    <p id="id">Student ID: 20015952</p>
+    <p id="copy">&copy;Wilson Zoo</p>
+</footer>
+</body>
+</body>
+</html>
